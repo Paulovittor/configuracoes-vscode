@@ -74,9 +74,7 @@ Dentro de `settings.json` :
 ```
 
 #EXTENSSÕES OPCIONAIS PARA MELHOR CUSTOMIZAÇÃO. <br>
+:diamond_shape_with_a_dot_inside: Material icon theme: serve para melhorar os ícones dos arquivos.
 
-:diamond_shape_with_a_dot_inside: Prettier - Code formatter <br>
-:diamond_shape_with_a_dot_inside: Material icon theme <br>
-:diamond_shape_with_a_dot_inside: Omni Theme <br>
 
 obs: geralmente utilizando o @recommended nas extenssões do vs code.
