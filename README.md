@@ -75,6 +75,7 @@ Dentro de `settings.json` :
 
 #EXTENSSÕES OPCIONAIS PARA MELHOR CUSTOMIZAÇÃO. <br>
 :diamond_shape_with_a_dot_inside: Material icon theme: serve para melhorar os ícones dos arquivos.
+:diamond_shape_with_a_dot_inside: Erros leans: serve para marcar os erros in line
 
 
 obs: geralmente utilizando o @recommended nas extenssões do vs code.
