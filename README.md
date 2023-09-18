@@ -73,9 +73,149 @@ Dentro de `settings.json` :
 
 ```
 
-#EXTENSSÕES OPCIONAIS PARA MELHOR CUSTOMIZAÇÃO. <br>
-:diamond_shape_with_a_dot_inside: Material icon theme: serve para melhorar os ícones dos arquivos.
-:diamond_shape_with_a_dot_inside: Erros leans: serve para marcar os erros in line
+# EXTENSSÕES OPCIONAIS PARA MELHOR CUSTOMIZAÇÃO. <br>
+
+:diamond_shape_with_a_dot_inside: Material icon theme: serve para melhorar os ícones dos arquivos. <br>
+:diamond_shape_with_a_dot_inside: Erros leans: serve para marcar os erros in line. <br>
+:diamond_shape_with_a_dot_inside: O tema Omni muda a aparencia do vs code. <br>
+
+Como definido na extensions.json, pesquisando com @recommedations, todas essas extenssões apareceção para serem instaladas, icluindo notificações de instalação.
 
 
-obs: geralmente utilizando o @recommended nas extenssões do vs code.
+# Customizando o tema omni com editor.tokenColorCustomizations.
+
+Deve-se abrir as opções em `arquivo`, ir em `preferencias` e depois em `configurações` pesquisar por "token" e na opção `Editor: Token Color Customizations` clicar em `editar em: settings.json` neste arquivo, dentro de `editor.tokenColorCustomizations` por o seguinte código:
+
+```json
+"editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "foreground": "#44794d" // Cor para comentários e símbolos de comentários
+        }
+      },
+      {
+        "scope": [
+          "entity.name.tag.html",
+          "punctuation.definition.tag.begin.html",
+          "punctuation.definition.tag.end.html"
+        ],
+        "settings": {
+          "foreground": "#0492cf" // Cor para tags HTML e símbolos < e >
+        }
+      },
+      {
+        "scope": ["entity.other.attribute-name.html"],
+        "settings": {
+          "foreground": "#95d4d4" // Cor para atributos HTML
+        }
+      },
+      {
+        "scope": ["string.quoted.double.html"],
+        "settings": {
+          "foreground": "#c48a58" // Cor para valores em aspas duplas HTML
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator.assignment.html",
+          "punctuation.separator.key-value.html"
+        ],
+        "settings": {
+          "foreground": "#8bc5c5" // Cor para o símbolo = em atributos
+        }
+      },
+      {
+        "scope": [
+          "punctuation.definition.string.begin.html",
+          "punctuation.definition.string.end.html"
+        ],
+        "settings": {
+          "foreground": "#c48a58" // Cor para as aspas duplas dos valores dos atributos
+        }
+      },
+      {
+        "scope": [
+          "support.type.property-name.css" // Propriedades CSS
+        ],
+        "settings": {
+          "foreground": "#1f96ce" // Cor para propriedades CSS
+        }
+      },
+      {
+        "scope": [
+          "support.constant.property-value.css" // Valores CSS
+        ],
+        "settings": {
+          "foreground": "#00FF00" // Cor para valores CSS
+        }
+      },
+      {
+        "scope": [
+          "entity.name.tag.css" // Seletores CSS
+        ],
+        "settings": {
+          "foreground": "#FFA500" // Cor para seletores CSS
+        }
+      },
+      {
+        "scope": [
+          "punctuation.separator.key-value.css" // Símbolo : em CSS
+        ],
+        "settings": {
+          "foreground": "#9cdbf8" // Cor para símbolo :
+        }
+      },
+      {
+        "scope": [
+          "constant.numeric.css" // Números em CSS
+        ],
+        "settings": {
+          "foreground": "#faf4ea" // Cor para números
+        }
+      },
+
+      // Personalizações para strings JavaScript (entre aspas)
+      {
+        "scope": ["string.quoted.single.js", "string.quoted.double.js"],
+        "settings": {
+          "foreground": "#bdb43d" // Cor para strings JavaScript
+        }
+      },
+
+      // Personalizações para valores JavaScript
+      {
+        "scope": [
+          "constant.language.js",
+          "variable.language.js",
+          "variable.other.js"
+        ],
+        "settings": {
+          "foreground": "#00FF00" // Cor para valores JavaScript
+        }
+      },
+
+
+      //CUSTOMIZANDO OS ARQUIVOS JSON
+      {
+        "scope": ["string.quoted.single.json", "string.quoted.double.json"],
+        "settings": {
+          "foreground": "#c7a865" // Cor para strings JavaScript
+        }
+      }
+
+    ]
+  }
+```
+
+No código acima terá toda as configurações de cores das sintaxes html, css e algumas de javascrips que poderão ser customizadas dentro desse proprio arquivo.
+Juntamente com esse, no arquivo settings.json pode-se customizar o background-color do tema omni com o codigo abaixo:
+
+```json
+  "workbench.colorCustomizations": {
+    "editor.background": "#181717"
+},
+```
+
+
