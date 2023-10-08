@@ -21,11 +21,15 @@ Dentro de `extensions.json` :
 
 ```json
 {
-"recommendations": [
-"esbenp.prettier-vscode",
-"PKief.material-icon-theme",
-"rocketseat.theme-omni"
-]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "PKief.material-icon-theme",
+    "rocketseat.theme-omni",
+    "pranaygp.vscode-css-peek",
+    "kisstkondoros.vscode-gutter-preview",
+    "vincaslt.highlight-matching-tag",
+    "anteprimorac.html-end-tag-labels",
+  ]
 }
 ```
 
