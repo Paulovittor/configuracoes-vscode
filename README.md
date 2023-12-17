@@ -98,7 +98,14 @@ Como definido na extensions.json, pesquisando com @recommedations, todas essas e
 Deve-se abrir as opções em `arquivo`, ir em `preferencias` e depois em `configurações` pesquisar por "token" e na opção `Editor: Token Color Customizations` clicar em `editar em: settings.json` neste arquivo, dentro de `editor.tokenColorCustomizations` por o seguinte código:
 
 ```json
-"editor.tokenColorCustomizations": {
+{
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "files.autoSave": "afterDelay",
+  "workbench.colorTheme": "Omni",
+  "editor.fontFamily": "Fira code light",
+  "editor.tokenColorCustomizations": {
+    
     "textMateRules": [
       {
         "scope": ["comment", "punctuation.definition.comment"],
@@ -207,7 +214,6 @@ Deve-se abrir as opções em `arquivo`, ir em `preferencias` e depois em `config
         }
       },
 
-
       //CUSTOMIZANDO OS ARQUIVOS JSON
       {
         "scope": ["string.quoted.single.json", "string.quoted.double.json"],
@@ -215,9 +221,16 @@ Deve-se abrir as opções em `arquivo`, ir em `preferencias` e depois em `config
           "foreground": "#c7a865" // Cor para strings JavaScript
         }
       }
-
     ]
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "java.debug.settings.console": "internalConsole",
+  "launch": {
+    
+    "configurations": [],
+    "compounds": []
   }
+}
 ```
 
 No código acima terá toda as configurações de cores das sintaxes html, css e algumas de javascrips que poderão ser customizadas dentro desse proprio arquivo.
